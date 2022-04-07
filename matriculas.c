@@ -60,6 +60,9 @@ void setMatriculas(Matricula* data, int i){
 	fclose(fich);
 }
 
+//Cabecera:void listarMatriculas(Matricula *data, int arraySize)
+//Precondicion:
+//Postcondicion:
 
 void listarMatriculas(Matricula *data, int arraySize){
 	int i;
@@ -70,12 +73,16 @@ void listarMatriculas(Matricula *data, int arraySize){
 	}
 }
 
-
+//Cabecera:void imprimeMatricula(Matricula m)
+//Precondicion:
+//Postcondicion:
 void imprimeMatricula(Matricula m){
    printf("\n -Materia:%.4d\n -Alumno: %.6d\n",m.id_mat, m.id_alum);
 }
 
-
+//Cabecera: void listaMateriasAlumno(Matricula *data, int arraySize, int id_alum)
+//Precondicion:
+//Postcondicion:
 void listaMateriasAlumno(Matricula *data, int arraySize, int id_alum){
 	int i;
 	
@@ -88,6 +95,9 @@ void listaMateriasAlumno(Matricula *data, int arraySize, int id_alum){
 	}	
 }
 
+//Cabecera:void addMatricula(Matricula** matriculas, int* nMatriculas, int id_alum)
+//Precondicion:
+//Postcondicion:
 void addMatricula(Matricula** matriculas, int* nMatriculas, int id_alum){
 	int i;
 	
@@ -109,6 +119,9 @@ void addMatricula(Matricula** matriculas, int* nMatriculas, int id_alum){
 	listaMateriasAlumno(&**matriculas, *nMatriculas, id_alum);
 }
 
+//Cabecera: void modificarMatricula(Matricula** data, int nMatriculas, int id_alum)
+//Precondicion:
+//Postcondicion:
 void modificarMatricula(Matricula** data, int nMatriculas, int id_alum){
 	
 	int i, j, aux, encontrado=0, cont=1; 
@@ -124,6 +137,9 @@ void modificarMatricula(Matricula** data, int nMatriculas, int id_alum){
 	cambiarMateria(aux-1, &*data);
 }
 
+//Cabecera: void eliminarMatricula(Matricula** data, int* nMatriculas, int id_alum)
+//Precondicion:
+//Postcondicion:
 void eliminarMatricula(Matricula** data, int* nMatriculas, int id_alum){
 	int i, aux; 
 	printf("ELIMINAR CALIFICACIONES\n\n");
@@ -151,7 +167,9 @@ void eliminarMatricula(Matricula** data, int* nMatriculas, int id_alum){
 	}
 }
 
-
+//Cabecera:void cambiarMateria(int id, Matricula** data)
+//Precondicion:
+//Postcondicion:
 void cambiarMateria(int id, Matricula** data){
 	int materia;
 	
